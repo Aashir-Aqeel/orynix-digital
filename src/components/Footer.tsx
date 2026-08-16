@@ -23,7 +23,12 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
     const el = document.getElementById(id);
-    if (el) {
+    if (!el) {
+      // Section lives on the home page (e.g. when viewing /thank-you).
+      window.location.assign(`/#${id}`);
+      return;
+    }
+    {
       const navOffset = 80;
       const elementPosition = el.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - navOffset;

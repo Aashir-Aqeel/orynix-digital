@@ -52,7 +52,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContact }) => {
     setMobileMenuOpen(false);
     const targetId = href.replace('#', '');
     const element = document.getElementById(targetId);
-    if (element) {
+    if (!element) {
+      // Section lives on the home page (e.g. when viewing /thank-you).
+      window.location.assign(`/${href}`);
+      return;
+    }
+    {
       const navOffset = 80;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - navOffset;

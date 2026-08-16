@@ -6,7 +6,6 @@ import {
   MapPin, 
   MessageSquare, 
   Send, 
-  CheckCircle2, 
   Sparkles,
   ArrowRight,
   ShieldCheck,
@@ -28,8 +27,8 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ preselectedServi
     details: ''
   });
 
-  const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const serviceOptions = [
     'Website Development',
@@ -48,28 +47,21 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ preselectedServi
     'Not Sure Yet'
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitError(null);
 
-    setTimeout(() => {
+    try {
+      // No submission backend yet: the enquiry is handed over on the confirmation page.
+      // ponytail: replace this delay with the real submit call; the redirect below must
+      // stay on the success path only, since /thank-you is the Google Ads conversion page.
+      await new Promise((resolve) => setTimeout(resolve, 600));
+      window.location.assign('/thank-you');
+    } catch {
       setIsSubmitting(false);
-      setSubmitted(true);
-    }, 600);
-  };
-
-  const handleOpenWhatsAppFromForm = () => {
-    const message = `Hi ORYNIX, I submitted a consultation request:
-• Name: ${formData.fullName || 'Client'}
-• Business: ${formData.businessName || 'Business'}
-• Service: ${formData.service}
-• Budget: ${formData.budget}
-• Phone: ${formData.phone}
-• Email: ${formData.email}
-• Project Notes: ${formData.details || 'Let\'s connect to discuss.'}`;
-
-    const encoded = encodeURIComponent(message);
-    window.open(`https://wa.me/923102133355?text=${encoded}`, '_blank');
+      setSubmitError('We could not send your request. Please try again or message us on WhatsApp.');
+    }
   };
 
   return (
@@ -192,42 +184,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ preselectedServi
           <div className="lg:col-span-7">
             <div className="rounded-2xl p-7 sm:p-9 bg-white border border-slate-200 shadow-sm relative">
               
-              {submitted ? (
-                <div className="py-12 text-center space-y-5 animate-in fade-in">
-                  <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
-                    <CheckCircle2 className="w-10 h-10" />
-                  </div>
-
-                  <div className="space-y-2">
-                    <h3 className="text-2xl font-bold text-slate-900">
-                      Thank You, {formData.fullName}!
-                    </h3>
-                    <p className="text-sm text-slate-600 max-w-md mx-auto">
-                      Your consultation request for <strong>{formData.service}</strong> has been received. Our technical team in Karachi will review your details and contact you shortly.
-                    </p>
-                  </div>
-
-                  <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
-                    <button
-                      type="button"
-                      onClick={handleOpenWhatsAppFromForm}
-                      className="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-bold shadow-md transition-all flex items-center gap-2 cursor-pointer"
-                    >
-                      <MessageSquare className="w-4 h-4" />
-                      <span>Send Summary to WhatsApp</span>
-                    </button>
-
-                    <button
-                      type="button"
-                      onClick={() => setSubmitted(false)}
-                      className="px-5 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs sm:text-sm font-semibold transition-all cursor-pointer"
-                    >
-                      Submit Another Query
-                    </button>
-                  </div>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-5">
+              <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="border-b border-slate-100 pb-3 mb-4">
                     <h3 className="text-lg font-bold text-slate-900">
                       Request Free Project Consultation
@@ -365,12 +322,17 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ preselectedServi
                     </button>
                   </div>
 
+                  {submitError && (
+                    <div className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-xs font-semibold text-red-700 text-center">
+                      {submitError}
+                    </div>
+                  )}
+
                   <div className="text-center text-[11px] text-slate-500 flex items-center justify-center gap-1.5">
                     <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
                     <span>Your contact details are strictly confidential and never shared.</span>
                   </div>
                 </form>
-              )}
 
             </div>
           </div>

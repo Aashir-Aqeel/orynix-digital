@@ -16,10 +16,14 @@ import { ContactSection } from './components/ContactSection';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 import { Footer } from './components/Footer';
 import { LegalModal } from './components/LegalModal';
+import { ThankYouPage } from './components/ThankYouPage';
 
 export default function App() {
   const [preselectedService, setPreselectedService] = useState<string>('Website + Automation');
   const [legalModalType, setLegalModalType] = useState<'privacy' | 'terms' | null>(null);
+
+  // Navigation between pages is a full document load, so the path is read once.
+  const isThankYou = window.location.pathname.replace(/\/+$/, '') === '/thank-you';
 
   const handleSelectService = (serviceTitle: string) => {
     setPreselectedService(serviceTitle);
@@ -68,6 +72,10 @@ export default function App() {
 
       {/* Main Content Sections */}
       <main className="flex-1">
+        {isThankYou ? (
+        <ThankYouPage />
+        ) : (
+        <>
         {/* 1. Hero Section */}
         <Hero 
           onStartProject={scrollToContact}
@@ -109,6 +117,8 @@ export default function App() {
 
         {/* 13. Contact & Consultation Section */}
         <ContactSection preselectedService={preselectedService} />
+        </>
+        )}
       </main>
 
       {/* 14. Floating WhatsApp Button */}

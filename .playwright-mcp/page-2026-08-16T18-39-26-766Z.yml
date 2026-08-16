@@ -1,0 +1,134 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e6]:
+      - generic [ref=e7]: Digital Solutions Built for Modern Pakistani Businesses
+      - generic [ref=e10]:
+        - 'link "WhatsApp: +92 310 2133355" [ref=e11] [cursor=pointer]':
+          - /url: https://wa.me/923102133355
+        - generic [ref=e15]: •
+        - generic [ref=e16]: Karachi, Pakistan
+    - generic [ref=e19]:
+      - link "ORYNIX" [ref=e20] [cursor=pointer]:
+        - /url: "#home"
+      - navigation [ref=e28]:
+        - link "Home" [ref=e29] [cursor=pointer]:
+          - /url: "#home"
+        - link "Services" [ref=e30] [cursor=pointer]:
+          - /url: "#services"
+        - link "Solutions" [ref=e31] [cursor=pointer]:
+          - /url: "#solutions"
+        - link "Portfolio" [ref=e32] [cursor=pointer]:
+          - /url: "#portfolio"
+        - link "Process" [ref=e33] [cursor=pointer]:
+          - /url: "#process"
+        - link "About" [ref=e34] [cursor=pointer]:
+          - /url: "#about"
+        - link "Contact" [ref=e35] [cursor=pointer]:
+          - /url: "#contact"
+      - link "Let's Talk" [ref=e37] [cursor=pointer]:
+        - /url: https://wa.me/923102133355
+  - main [ref=e41]:
+    - generic [ref=e43]:
+      - generic [ref=e44]:
+        - generic [ref=e49]:
+          - heading "Thank You for Contacting ORYNIX" [level=1] [ref=e50]
+          - paragraph [ref=e51]: Your enquiry has been received successfully. We'll review your requirements and get back to you shortly.
+          - paragraph [ref=e52]: Need a faster response? Chat with us directly on WhatsApp.
+        - generic [ref=e53]:
+          - link "Chat on WhatsApp" [ref=e54] [cursor=pointer]:
+            - /url: https://wa.me/923102133355?text=Hi%20ORYNIX%2C%20I%20just%20submitted%20a%20project%20enquiry%20through%20your%20website.
+          - link "Back to Home" [ref=e58] [cursor=pointer]:
+            - /url: /
+      - generic [ref=e62]:
+        - generic [ref=e63]: What happens next?
+        - list [ref=e68]:
+          - listitem [ref=e69]:
+            - generic [ref=e70]: "1"
+            - generic [ref=e71]: We review your enquiry
+          - listitem [ref=e72]:
+            - generic [ref=e73]: "2"
+            - generic [ref=e74]: We assess your requirements
+          - listitem [ref=e75]:
+            - generic [ref=e76]: "3"
+            - generic [ref=e77]: We contact you to discuss the project
+          - listitem [ref=e78]:
+            - generic [ref=e79]: "4"
+            - generic [ref=e80]: We recommend the most suitable solution
+        - generic [ref=e81]:
+          - link "Email info@orynixdigital.com" [ref=e82] [cursor=pointer]:
+            - /url: mailto:info@orynixdigital.com
+            - generic [ref=e87]:
+              - generic [ref=e88]: Email
+              - generic [ref=e89]: info@orynixdigital.com
+          - link "WhatsApp +92 310 2133355" [ref=e90] [cursor=pointer]:
+            - /url: https://wa.me/923102133355
+            - generic [ref=e94]:
+              - generic [ref=e95]: WhatsApp
+              - generic [ref=e96]: +92 310 2133355
+  - generic [ref=e97]:
+    - generic [ref=e98]:
+      - link "Chat with ORYNIX" [ref=e100] [cursor=pointer]:
+        - /url: https://wa.me/923102133355?text=Hi%20ORYNIX%2C%20I%27d%20like%20to%20discuss%20a%20project.
+      - button "Close tooltip" [ref=e101]
+    - link "Chat with ORYNIX on WhatsApp" [ref=e105] [cursor=pointer]:
+      - /url: https://wa.me/923102133355?text=Hi%20ORYNIX%2C%20I%27d%20like%20to%20discuss%20a%20project.
+      - generic [ref=e109]: "1"
+  - contentinfo [ref=e110]:
+    - generic [ref=e111]:
+      - generic [ref=e112]:
+        - generic [ref=e113]:
+          - generic [ref=e114]: ORYNIX
+          - paragraph [ref=e121]: Web development and business automation solutions for modern businesses.
+          - generic [ref=e122]: Karachi Headquartered • Serving Pakistan
+        - generic [ref=e125]:
+          - heading "Services" [level=4] [ref=e126]
+          - list [ref=e127]:
+            - listitem [ref=e128]:
+              - link "Website Development" [ref=e129] [cursor=pointer]:
+                - /url: "#services"
+            - listitem [ref=e130]:
+              - link "WhatsApp Automation" [ref=e131] [cursor=pointer]:
+                - /url: "#services"
+            - listitem [ref=e132]:
+              - link "Business Automation" [ref=e133] [cursor=pointer]:
+                - /url: "#services"
+            - listitem [ref=e134]:
+              - link "AI Solutions" [ref=e135] [cursor=pointer]:
+                - /url: "#services"
+        - generic [ref=e136]:
+          - heading "Company" [level=4] [ref=e137]
+          - list [ref=e138]:
+            - listitem [ref=e139]:
+              - link "About" [ref=e140] [cursor=pointer]:
+                - /url: "#about"
+            - listitem [ref=e141]:
+              - link "Portfolio" [ref=e142] [cursor=pointer]:
+                - /url: "#portfolio"
+            - listitem [ref=e143]:
+              - link "Process" [ref=e144] [cursor=pointer]:
+                - /url: "#process"
+            - listitem [ref=e145]:
+              - link "Contact" [ref=e146] [cursor=pointer]:
+                - /url: "#contact"
+        - generic [ref=e147]:
+          - heading "Contact" [level=4] [ref=e148]
+          - generic [ref=e149]:
+            - generic [ref=e150]: Karachi, Pakistan
+            - link "+92 310 2133355" [ref=e155] [cursor=pointer]:
+              - /url: https://wa.me/923102133355
+            - link "info@orynixdigital.com" [ref=e159] [cursor=pointer]:
+              - /url: mailto:info@orynixdigital.com
+      - generic [ref=e164]:
+        - generic [ref=e165]:
+          - generic [ref=e166]:
+            - text: © 2026
+            - strong [ref=e167]: ORYNIX Digitals
+            - text: . Karachi, Pakistan.
+          - generic [ref=e168]: "|"
+          - generic [ref=e169]: info@orynixdigital.com
+        - generic [ref=e170]:
+          - button "Privacy Policy" [ref=e171] [cursor=pointer]
+          - generic [ref=e172]: •
+          - button "Terms & Conditions" [ref=e173] [cursor=pointer]
+          - generic [ref=e174]: •
+          - button "Back to top" [ref=e175] [cursor=pointer]
