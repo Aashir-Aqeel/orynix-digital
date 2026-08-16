@@ -167,11 +167,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
                 <span>+92 310 2133355</span>
               </a>
               <a 
-                href="mailto:orynixdigitalsolutions@gmail.com" 
+                href="mailto:info@orynixdigital.com" 
                 className="flex items-center gap-2.5 hover:text-[#3B82F6] transition-colors break-all"
               >
                 <Mail className="w-4 h-4 text-blue-400 shrink-0" />
-                <span>orynixdigitalsolutions@gmail.com</span>
+                <span>info@orynixdigital.com</span>
               </a>
             </div>
           </div>
@@ -183,7 +183,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
           <div className="flex items-center gap-2">
             <span>© 2026 <strong className="text-white">ORYNIX Digitals</strong>. Karachi, Pakistan.</span>
             <span className="text-slate-600 hidden sm:inline">|</span>
-            <span className="text-slate-400 hidden sm:inline">orynixdigitalsolutions@gmail.com</span>
+            <span className="text-slate-400 hidden sm:inline">info@orynixdigital.com</span>
           </div>
 
           <div className="flex items-center gap-5">

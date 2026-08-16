@@ -52,7 +52,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({ isOpen, type, onClose })
               </p>
               <h4 className="font-bold text-slate-900 text-sm pt-2">4. Contact Us</h4>
               <p>
-                If you have any questions regarding this Privacy Policy, contact us at <strong>orynixdigitalsolutions@gmail.com</strong> or via WhatsApp at <strong>+92 310 2133355</strong>.
+                If you have any questions regarding this Privacy Policy, contact us at <strong>info@orynixdigital.com</strong> or via WhatsApp at <strong>+92 310 2133355</strong>.
               </p>
             </>
           ) : (

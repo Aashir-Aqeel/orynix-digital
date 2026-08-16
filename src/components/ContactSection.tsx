@@ -136,7 +136,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ preselectedServi
 
               <div className="space-y-3.5 text-sm">
                 <a 
-                  href="mailto:orynixdigitalsolutions@gmail.com" 
+                  href="mailto:info@orynixdigital.com" 
                   className="flex items-center gap-3 text-slate-700 hover:text-[#3B82F6] transition-colors group p-2 rounded-xl hover:bg-slate-50"
                 >
                   <div className="w-9 h-9 rounded-lg bg-blue-50 text-[#3B82F6] flex items-center justify-center shrink-0">
@@ -145,7 +145,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ preselectedServi
                   <div>
                     <div className="text-[11px] font-semibold text-slate-400">Email Address</div>
                     <div className="text-xs sm:text-sm font-bold text-slate-800 group-hover:text-[#3B82F6]">
-                      orynixdigitalsolutions@gmail.com
+                      info@orynixdigital.com
                     </div>
                   </div>
                 </a>
